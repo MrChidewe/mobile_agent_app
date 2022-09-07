@@ -1,6 +1,6 @@
 # agent_app
 
-An agent app that kets conductor confirm and view ticket details of a local public transport operator
+An agent app that allows conductors to confirm and view ticket details of a local public transport operator
 
 #Screen Shots
 
