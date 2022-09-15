@@ -51,11 +51,23 @@ dependencies:
   pie_chart: ^5.3.2
   syncfusion_flutter_charts: ^20.2.46
 
+  #pdf generator
+  pdf: ^3.8.3
+
+  path_provider: ^2.0.11
+
+  open_file: ^3.2.1
+
+  syncfusion_flutter_pdf: ^20.2.48
+
+  google_fonts: ^3.0.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_launcher_icons: ^0.10.0
   flutter_lints: ^2.0.1
+  printing: ^5.9.3
   
 
 flutter_icons:

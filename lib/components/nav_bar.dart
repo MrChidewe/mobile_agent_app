@@ -5,6 +5,7 @@ import 'package:agent_app/pages/informatics/route_details_page.dart';
 import 'package:agent_app/pages/tickets/ticket_requests.dart';
 import 'package:flutter/material.dart';
 
+import '../pages/attendance_page.dart';
 import '../pages/tickets/confirmed_tickets.dart';
 import '../pages/tickets/ticket_validate.dart';
 
@@ -16,6 +17,29 @@ class Navbar extends StatefulWidget {
 }
 
 class _NavbarState extends State<Navbar> {
+  void logOutDialog() {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            //title: Text('Confirm'),
+            content: Text("Are you sure you want to Log out"),
+            actions: [
+              MaterialButton(
+                onPressed: () {},
+                child: Text('YES'),
+              ),
+              MaterialButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: Text('NO'),
+              )
+            ],
+          );
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -33,7 +57,7 @@ class _NavbarState extends State<Navbar> {
                     width: 100, height: 100, fit: BoxFit.cover),
               ),
             ),
-            //decoration: BoxDecoration(color: Colors.blueGrey),
+            decoration: BoxDecoration(color: Color.fromARGB(255, 36, 19, 136)),
           ),
         ),
         ListTile(
@@ -169,6 +193,32 @@ class _NavbarState extends State<Navbar> {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Text(
+            "Attendance",
+            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey),
+          ),
+        ),
+        ListTile(
+          visualDensity: VisualDensity(vertical: -4),
+          leading: Icon(
+            Icons.assignment_ind,
+            color: Colors.deepPurple,
+          ),
+          title: Text('Attendance Register'),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return AttendancePage();
+                },
+              ),
+            );
+          },
+        ),
+        Divider(),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(
             "Informatics",
             style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey),
           ),
@@ -218,6 +268,7 @@ class _NavbarState extends State<Navbar> {
             color: Colors.deepPurple,
           ),
           title: Text('Log Out'),
+          onTap: logOutDialog,
         ),
       ],
     ));

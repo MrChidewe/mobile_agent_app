@@ -55,8 +55,8 @@ class _ValidateTicketState extends State<ValidateTicket> {
           children: [
             SizedBox(height: 50),
             Text(
-              "Scan QR Code to verify ticket",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              "Scan To Verify Ticket",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
             ),
             SizedBox(height: 20),
             Icon(Icons.qr_code_scanner, size: 80),

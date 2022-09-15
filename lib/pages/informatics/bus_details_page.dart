@@ -38,14 +38,17 @@ class _BusDetailPageState extends State<BusDetailPage> {
                   SizedBox(height: 15),
                   Text(
                     'Additional Information',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 25,
+                        color: Colors.blueGrey),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Table(
                       //columnWidths: ,
                       border: TableBorder.all(
-                          color: Colors.orange,
+                          color: Colors.white,
                           borderRadius: BorderRadius.circular(10)),
                       children: [
                         TableRow(
@@ -331,6 +334,11 @@ class SampleTicket extends StatelessWidget {
                           children: [
                             Icon(
                               Icons.tv,
+                              color: Colors.grey,
+                              size: 20,
+                            ),
+                            Icon(
+                              Icons.music_note,
                               color: Colors.grey,
                               size: 20,
                             ),
